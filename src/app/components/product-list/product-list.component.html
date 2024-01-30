@@ -1,0 +1,10 @@
+<p>product-list works!</p>
+
+<!-- Path: src/app/components/product-list/product-list.component.ts -->
+<ul>
+
+    <li *ngFor="let item of ProductList">
+        <h3>Product Name Is {{item.name}}</h3>
+        <app-product-alert [product]="item" (shareProduct)="shareAlert($event)"></app-product-alert>
+    </li>
+</ul>
