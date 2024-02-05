@@ -1,2 +1,8 @@
-<p>product-details works!</p>
+<div *ngIf="product" >
 <p>{{product?.name}}</p>
+<p>{{product?.price | currency}}</p>
+<p>{{product?.description}}</p>
+<button type="button" (click)="addToCart(product)">Buy Product</button>
+</div>
+
+<button type="button" [routerLink]="['/cart']" >Go TO Cart</button>
